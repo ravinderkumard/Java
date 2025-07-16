@@ -373,3 +373,22 @@ end
 | 4        | channel-sms-service                             | Show polymorphism and vender SDK usage. |
 | 5          | notification-api(orchestrator)                               | Wires everything end-to-end |
 | 6 | retry/DLQ listener + metrics                    | Production hardening - reliablity & observability |
+
+
+
+
+# Sprint 1: Implement notification-core
+notification-core
+└─ src/main/java/com/ravi/notification/core
+   ├─ model/
+   │   ├─ SendRequest.java
+   │   ├─ Message.java
+   │   ├─ SendResult.java
+   │   └─ ChannelType.java
+   ├─ port/
+   │   └─ ChannelSender.java          # SPI (hexagonal/clean‑arch style)
+   ├─ service/
+   │   ├─ TemplateEngine.java
+   │   └─ NotificationService.java
+   └─ config/
+       └─ CoreConfig.java             # if you need @Bean maps, etc.
