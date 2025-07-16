@@ -361,3 +361,15 @@ else email enabled
 end
 @enduml
 
+
+
+# Roadmap of Components to Build
+
+| Sprint                | Component | Why First? |
+|----------------------|--------------------------------------|----------------|
+| 1         | notification-core(domain+SPI) | Gives you stable abstraction - everything else depends on this. |
+| 2        | template-service(REST+JPA)                             | Unblocks rendering logic and unit tests |
+| 3       | channel-email-service                                 | Typical "happy-path" channel; easies to demo |
+| 4        | channel-sms-service                             | Show polymorphism and vender SDK usage. |
+| 5          | notification-api(orchestrator)                               | Wires everything end-to-end |
+| 6 | retry/DLQ listener + metrics                    | Production hardening - reliablity & observability |
