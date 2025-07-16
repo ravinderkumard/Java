@@ -1,4 +1,4 @@
-package com.ravi.notification;
+package com.ravi.notification.core.model;
 
 import java.util.Map;
 import java.util.UUID;

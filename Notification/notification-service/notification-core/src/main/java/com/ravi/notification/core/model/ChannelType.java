@@ -1,4 +1,4 @@
-package com.ravi.notification;
+package com.ravi.notification.core.model;
 
 public enum ChannelType {
 	EMAIL,
